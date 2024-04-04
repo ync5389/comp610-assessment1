@@ -10,25 +10,30 @@ package Question_1;
  * @author xhu
  */
 public class Stack <E extends Comparable>{
-    LinkedList<E> stack = new LinkedList();
+    LinkedList<E> test = new LinkedList();
     
-    public void push(E data)
-    {
+    public void push(E data){
+        test.add(data);
+    }
+    
+    public E pop(){
+        E out = test.getData(0);
+        return out;
+    }
+    
+    public void printStack(){
 
     }
     
-    public E pop()
-    {
-        return null;
-    }
-    
-    public void printStack()
-    {
-
-    }
-    
-    public int getSize()
-    {
+    public int getSize(){
         return 0;
+    }
+
+    public boolean isEmpty(){
+        if(test == null){
+            return true;
+        }else{
+                return false;
+            }
     }
 }

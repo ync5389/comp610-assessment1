@@ -12,14 +12,20 @@ package Question_1;
 public class Node <E extends Comparable> {
     public E data;
     public Node <E> next;
+    public Node(E data){
+        this.data = data;
+        this.next = null;
+    }
     
-    public boolean equals(Node node)
-    {
+    public boolean equals(Node node){
         return false;
     }
     
-    public int compareTo(Node node)
-    {
-        return 0;
+    public int compareTo(Node node){
+        if (node == null) {
+            throw new NullPointerException("Cannot compare with a null node.");
+        }
+
+        return this.data.compareTo(node.data);
     }
 }
